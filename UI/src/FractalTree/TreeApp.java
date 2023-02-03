@@ -21,7 +21,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
-import javafx.scene.text.Text;
+import javafx.scene.text.Text; 
 
 public class TreeApp extends Application {
     private GameMenu gameMenu; 
@@ -44,8 +44,8 @@ public class TreeApp extends Application {
         window = primaryStage;
         root = new Pane();
         root.setPrefSize(1250, 600);
-        Image backgroundImage = new Image("D:/Bi Oc CHo/FractalTree/UI/tree.jfif", 1920, 1080, false, true);
-        Image image = new Image("D:/Bi Oc CHo/FractalTree/UI/src/FractalTree/TreeIcon.jpg");
+        Image backgroundImage = new Image("D:/VGU_GIt/FractalTree/UI/tree.jfif", 1920, 1080, false, true);
+        Image image = new Image("D:/VGU_GIt/FractalTree/UI/src/FractalTree/TreeIcon.jpg");
         BackgroundImage background = new BackgroundImage(backgroundImage, BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, null);
         root.setBackground(new Background(background));
         window.getIcons().add(image);
