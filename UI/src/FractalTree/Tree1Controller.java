@@ -20,8 +20,8 @@
  import javafx.scene.Scene;
  import javafx.scene.control.Button;
  import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.Slider;
+ import javafx.scene.control.RadioButton;
+ import javafx.scene.control.Slider;
  import javafx.scene.layout.Pane;
  import javafx.scene.paint.Color;
  import javafx.stage.Stage;
@@ -312,7 +312,7 @@ import javafx.scene.control.Slider;
          }
          if (root.getLeftNode() != null){
              //root.UpdateChildBranchForTree4(RAngleC,AngleBetweenBranch);
-             root.UpdateChildBranchForTree1(root.getAngle(),RAngleC,LeftOrRight);
+             root.UpdateChildBranchForTree1(RAngleC,LeftOrRight);
              updateBranchPosition(root.getLeftNode());
          }
      }

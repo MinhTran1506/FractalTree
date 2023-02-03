@@ -153,7 +153,6 @@ public class Node {
 
     /**
      * This function is used to update the left and right branch (leaf) base on the current branch
-     * @param parentAngle   the parent angle
      * @param RAngleC       the changed angle
      */
     public void UpdateChildBranchForTree2(double RAngleC){
@@ -182,19 +181,29 @@ public class Node {
         right.setLength(this.getLength()/1.3);
     }
 
-    public void UpdateChildBranchForTree1(double parentAngle, double RAngleC, int LeftOrRight){
+    /**
+     * This function is used to update the left or right branch (leaf) base on the current branch
+     * @param RAngleC       the changed angle
+     * @param LeftOrRight   the direction needed to be draw
+     */
+    public void UpdateChildBranchForTree1(double RAngleC, int LeftOrRight){
         //Update child
         left.data.setStartX(getDataX());
         left.data.setEndX(getDataX());
         left.data.setStartY(getDataY());
         left.data.setEndY(getDataY()-left.length);
         left.data.getTransforms().clear();
-        left.setAngle(parentAngle + LeftOrRight*RAngleC);
-        left.setRotate(parentAngle + LeftOrRight * RAngleC);
+        left.setAngle(this.angle + LeftOrRight*RAngleC);
+        left.setRotate(this.angle + LeftOrRight * RAngleC);
         left.data.setStrokeWidth(this.data.getStrokeWidth()/1.3);
         left.setLength(this.getLength()/1.3);
     }
 
+    /**
+     * This function is used to update the left and right branch (leaf) base on the current branch
+     * @param RAngleC       the changed angle
+     * @param AngleBetweenBranch    the angle between the children branches
+     */
     public void UpdateChildBranchForTree3(double RAngleC, double AngleBetweenBranch){
         //Update left child
         left.data.setStartX(getDataX());
