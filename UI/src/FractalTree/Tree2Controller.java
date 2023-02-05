@@ -154,9 +154,10 @@
       * Reset all variable need for drawing
       */
      public void resetVariable(){
-         length = 0;
-         strokeW = 0;
-         Original_level = 0;
+        length = 50;
+        strokeW = 1;
+        Original_level = 0;
+        RAngleC = 0;
      }
  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  /*

@@ -56,7 +56,6 @@
       * change: to check if there is any change in the variables that are use to draw the tree
       * strokeW: the tree's trunk thickness (the branch thickness decreases after each level)
       * length: the tree's trunk length (the branch length decreases after each level)
-      * RAngle: the tree's trunk angle
       * RAngleC: the change in the angle after each level
       * AngleBetweenBranch: the angle between the left and right branches
       * Original_level: store the level of the tree
@@ -65,7 +64,7 @@
       * x: the starting X position of the tree base on coordinate
       * y: the starting Y position of the tree base on coordinate 
       * root: the tree trunk
-      * branchList: store every tree branch;
+      * branchList: store every tree branch
       * tl: the timeline to deal with animation when changing the angle
       * animation: the timeline to deal with animation
       * colorForTree: get the color base on HSB color system
@@ -79,7 +78,6 @@
      private double length = 50;
      private double RAngleC = 0;
      private double AngleBetweenBranch = 0;
-     private double RAngle = 0;
      private int Original_level = 0;
      private int Temp_level = 1;
      private int Temp_level1 = 0;
@@ -166,9 +164,11 @@
       * Reset all variable need for drawing
       */
      public void resetVariable(){
-         length = 0;
-         strokeW = 0;
+         length = 50;
+         strokeW = 1;
          Original_level = 0;
+         RAngleC = 0;
+         AngleBetweenBranch =0;
      }
  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  /*
@@ -208,7 +208,7 @@
      public void draw(){
          if (checkButtonDrawPress == false){
              Temp_level1 = Original_level;
-             root = new Node(x,y,length,strokeW,RAngle,0);
+             root = new Node(x,y,length,strokeW,0,0);
              branchList.add(root);
              myPane.getChildren().add(root.getData());
              checkButtonDrawPress = true;

@@ -11,7 +11,7 @@ import javafx.stage.Stage;
  * @author Tran Quang Minh
  */
 public class GameViewManager {
-    Image image = new Image("D:/VGU_GIt/FractalTree/UI/src/FractalTree/TreeIcon.jpg");
+    Image image = new Image("file:UI/src/FractalTree/TreeIcon.jpg");
     static Stage gameStage;
     static Stage gameStage2;
     static Scene gameScene;
