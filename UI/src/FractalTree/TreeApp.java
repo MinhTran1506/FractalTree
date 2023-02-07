@@ -24,6 +24,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text; 
 
 public class TreeApp extends Application {
+    
     private GameMenu gameMenu; 
     static Stage window;
     static Pane root;
